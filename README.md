@@ -1,5 +1,7 @@
 # Social Network API
 
+<img src ='assets/screenshot.png' height = 300px>
+
 ## Description
 
 This is a functional API for a simple social media website. It allows users to be added to a database, and then allows you to add friends or thoughts to those users' records in the database.
@@ -16,9 +18,11 @@ First, clone the code. Then, at the root folder, run npm i to install the necess
 
 ## Usage
 
-Watch the attached video:
+Watch the attached videos:
 
-<img src ='assets/screenshot.png' height = 300px>
+<img src ='/assets/demo1.gif'>
+
+<img src ='/assets/demo2.gif'>
 
 ## Questions
 
