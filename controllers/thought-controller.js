@@ -67,13 +67,15 @@ const thoughtController = {
 			})
 			.catch((err) => res.status(400).json(err));
 	},
-	addReaction({ params, body }, res) {
+	addReaction(req, res) {
+		console.log(req.params.thoughtId, req.body);
 		Thought.findOneAndUpdate(
-			{ _id: params.id },
-			{ $push: { reactions: body } },
+			{ _id: req.params.thoughtId },
+			{ $addToSet: { reactions: req.body } },
 			{ new: true, runValidators: true }
 		)
 			.then((dbThoughtData) => {
+				console.log(dbThoughtData);
 				if (!dbThoughtData) {
 					res.status(404).json({ message: "No thought found with this id!" });
 					return;
@@ -84,7 +86,7 @@ const thoughtController = {
 	},
 	deleteReaction({ params }, res) {
 		Thought.findOneAndUpdate(
-			{ _id: params.id },
+			{ _id: params.thoughtId },
 			{ $pull: { reactions: { reactionId: params.reactionId } } },
 			{ new: true }
 		)
