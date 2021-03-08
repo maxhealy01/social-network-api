@@ -18,7 +18,7 @@ First, clone the code. Then, at the root folder, run npm i to install the necess
 
 Watch the attached video:
 
-<img src ='assets/images/a' height = 450px>
+<img src ='assets/images/screenshot.png' height = 450px>
 
 ## Questions
 
